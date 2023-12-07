@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+  <meta name="theme-color" content="#3361cc" />
+  <meta name="referrer" content="origin" />
+  <title>Distance between two points (2D)</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" sizes="16x16 32x32 64x64" href="/favicon.ico" />
+  <link href="/css/published.css?t=456056402698933616" media="all" rel="stylesheet" type="text/css" />
+  <link rel="canonical" href="https://app.simplenote.com/p/yk8MWp" />
+</head>
+
+<body>
+  <div class="published-wrap no-ad-size">
+    <div class="wrapper">
+      <div class="app">
+        <div class="note note-detail-markdown">
+          
+            <h1 id="distance-between-two-points-2d">Distance between two points (2D)</h1>
+
+<h2 id="quick-answer">Quick Answer</h2>
+
+<pre><code># Define the coordinates of the two points using Vector2
+point1 = pygame.math.Vector2(3, 2)
+point2 = pygame.math.Vector2(7, 8)
+
+# Calculate the distance between the points
+distance = point1.distance_to(point2) # Result: 7.2
+
+# Alternatively, the distance can be represented as a vector
+distance_vector = point2 - point1 # Result: Vector2(4, 6)
+</code></pre>
+
+<h2 id="pythagorean-method">Pythagorean Method</h2>
+
+<pre><code>import math
+
+# Define the coordinates of the two points
+point1 = (3, 2)
+point2 = (7, 8)
+
+# Calculate the difference in x and y coordinates
+dx = point2[0] - point1[0]
+dy = point2[1] - point1[1]
+
+# Calculate the distance
+distance = math.sqrt(dx**2 + dy**2)
+
+print("Distance between points:", distance)
+</code></pre>
+
+<h3 id="instructions">Instructions:</h3>
+
+<ol>
+<li>We import the math module, which contains the sqrt function used for calculating the square root.</li>
+<li>We define two points point1 and point2 with their respective coordinates.</li>
+<li>We calculate the differences in the x-coordinate (dx) and the y-coordinate (dy) between the points.</li>
+<li>We use the distance formula, calculating the square root of the sum of the squares of dx and dy.</li>
+<li>Finally, we print out the distance.</li>
+</ol>
+
+<p><strong>Result: 7.2</strong></p>
+
+<h3 id="shortcut-using-mathdist">SHORTCUT: Using math.dist()</h3>
+
+<pre><code>import math
+
+# Define the coordinates of the two points
+point1 = (3, 2)
+point2 = (7, 8)
+
+# Calculate the distance
+distance = math.dist(point1, point2) # NEW
+
+print("Distance between points:", distance)
+</code></pre>
+
+<p><strong>Result: 7.2</strong></p>
+
+<h2 id="using-vectors-pygame">Using Vectors (Pygame)</h2>
+
+<pre><code>import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Define the vectors for points A and B using Pygame's Vector2
+A = pygame.math.Vector2(3, 2) 
+B = pygame.math.Vector2(7, 8) 
+
+# Calculate the vector from A to B
+distance_vector = B - A
+
+print("Distance vector:", distance_vector)
+
+# Quit Pygame
+pygame.quit()
+</code></pre>
+
+<h3 id="instructions-2">Instructions:</h3>
+
+<ol>
+<li>We define vectors A and B using pygame.math.Vector2. </li>
+<li>We calculate the distance vector by subtracting A from B. This operation is supported directly by the Vector2 class.</li>
+</ol>
+
+<p><strong>Result: [4, 6]</strong></p>
+
+<h3 id="convert-the-vector-to-a-number-using-pythagorean-formula">Convert the vector to a number using pythagorean formula:</h3>
+
+<p>We can convert the vector distance into a simple distance value by using the pythagorean method above:</p>
+
+<pre><code>import pygame
+import math # NEW
+
+# Initialize Pygame
+pygame.init()
+
+# Define the vectors for points A and B using Pygame's Vector2
+A = pygame.math.Vector2(3, 2) 
+B = pygame.math.Vector2(7, 8) 
+
+# Calculate the vector from A to B
+distance_vector = B - A
+
+print("Distance vector:", distance_vector)
+
+# Provide the vector's x and y values, which represent the x and y distance, and apply pythagorean
+distance = math.sqrt(distance_vector.x**2 + distance_vector.y**2) # NEW
+
+print("Distance:", distance) # NEW
+
+# Quit Pygame
+pygame.quit()
+</code></pre>
+
+<h3 id="instructions-3">Instructions:</h3>
+
+<ol>
+<li>Provide the vector's x and y values, which represent the x and y distance, and apply the pythagorean theorem as described above. </li>
+</ol>
+
+<p><strong>Result: 7.2</strong></p>
+
+<h3 id="shortcut-convert-the-vector-to-a-number-using-pygames-distance_to-method">SHORTCUT: Convert the vector to a number using Pygame's .distance_to() method</h3>
+
+<p>Call .distance_to() on a vector to get the length of that vector</p>
+
+<pre><code>import pygame
+
+# Initialize Pygame (required for using its modules)
+pygame.init()
+
+# Define the coordinates of the two points using Vector2
+point1 = pygame.math.Vector2(3, 2)
+point2 = pygame.math.Vector2(7, 8)
+
+# Calculate the distance between the points
+distance = point1.distance_to(point2)
+
+print("Distance between points:", distance)
+
+# Quit Pygame
+pygame.quit()
+</code></pre>
+
+<h3 id="instructions-4">Instructions:</h3>
+
+<ol>
+<li>Apply the .distance_to() method to the distance vector to get the length of the vector. </li>
+</ol>
+
+<p><strong>Result: 7.2</strong></p>
+
+          
+        </div>
+        <!-- .note -->
+
+      </div>
+      <!-- .app -->
+    </div>
+
+     <div class="published-top"><span class="logo"><a href="http://simplenote.com" title="Get Simplenote"
+          onclick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Published page footer link']);">Published with
+          Simplenote</a></span></div></div><!-- .published-wrap -->
+
+</body>
+
+</html>
