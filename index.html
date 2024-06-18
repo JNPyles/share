@@ -3,60 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 1em 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 2em 0;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>My Professional Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <div class="container">
+            <h1>Welcome to My Professional Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#page">Page</a>
-    </nav>
-    <div class="container">
-        <h2>Home Page</h2>
-        <p>This is the home page of your static website. You can add more content here to describe your site or provide information to your visitors.</p>
-    </div>
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>About Me</h2>
+                <p>Welcome to my website! Here you'll find information about my work in Bank Compliance, Bank Risk Management, Machine Learning & AI, and Game Development.</p>
+            </section>
+            <section class="highlights">
+                <h2>Highlights</h2>
+                <ul>
+                    <li><a href="articles.html">Read my latest articles</a></li>
+                    <li><a href="projects.html">Check out my projects</a></li>
+                    <li><a href="resources.html">Explore useful resources</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 My Professional Website. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
