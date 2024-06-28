@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: #f4f4f4;
 }
@@ -27,13 +27,13 @@ h1 {
     font-size: 1.5em;
     margin-bottom: 20px;
     color: #333333;
-    text-align: center;
+    text-align: left;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    text-align: left;
 }
 
 ul li {
