@@ -1,5 +1,5 @@
 body {
-    font-family: Courier, sans-serif;
+    font-family: 'Courier New', monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -43,7 +43,7 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #007BFF;
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 ul li a:hover {
